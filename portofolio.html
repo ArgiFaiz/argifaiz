@@ -2,15 +2,15 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Portofolio</title>
   <style>
     body {
       font-family: bahnschrift, sans-serif;
       background-color: #2b2a2a;
-      padding: 50px;
+      padding: 50px 20px;
       text-align: center;
       color: #f8f9fa;
+      margin: 0;
     }
 
     h1 {
@@ -29,12 +29,12 @@
 
     .portfolio-container {
       display: flex;
-      flex-wrap: nowrap; /* Kartu berdampingan tanpa wrap */
-      justify-content: center; /* Sejajar di tengah */
-      gap: 30px; /* Jarak antar kartu */
+      flex-wrap: nowrap; /* default desktop: kartu berdampingan */
+      justify-content: center; /* sejajar di tengah */
+      gap: 30px; /* jarak antar kartu */
       margin-top: 40px;
-      align-items: flex-start; /* Sejajar dari atas */
-      overflow-x: auto; /* Kalau kebanyakan kartu bisa scroll horizontal */
+      align-items: flex-start; /* sejajar dari atas */
+      overflow-x: auto; /* scroll horizontal kalau kartu banyak */
       padding-bottom: 10px;
     }
 
@@ -58,10 +58,11 @@
 
     .card img {
       width: 100%;
-      height: 240px; /* tinggi sama agar sejajar */
-      object-fit: cover;
+      height: auto; /* tinggi mengikuti proporsi asli gambar */
+      object-fit: contain; /* supaya gambar tidak terpotong */
       border-radius: 12px;
       margin-bottom: 15px;
+      background-color: #222; /* biar ada latar gelap saat ada space */
     }
 
     .card h2 {
@@ -83,6 +84,7 @@
       text-decoration: none;
       font-weight: bold;
       transition: background 0.3s;
+      text-align: center;
     }
 
     .btn-download:hover {
@@ -95,6 +97,29 @@
       color: #f8f9fa;
       font-weight: bold;
       text-decoration: none;
+    }
+
+    /* Responsif untuk layar kecil / HP */
+    @media (max-width: 600px) {
+      body {
+        padding: 30px 15px;
+      }
+
+      .portfolio-container {
+        flex-wrap: wrap; /* kartu turun satu per satu */
+        overflow-x: visible; /* hilangkan scroll horizontal */
+        gap: 20px;
+      }
+
+      .card {
+        width: 100%; /* kartu penuh layar HP */
+        margin: 0 auto;
+      }
+
+      .card img {
+        object-fit: contain;
+        height: auto;
+      }
     }
   </style>
 </head>
