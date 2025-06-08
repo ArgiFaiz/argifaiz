@@ -6,6 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Portofolio Saya</title>
   <style>
+    /* Biar padding & border gak bikin width membengkak */
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       background-color: #2b2a2a;
       font-family: bahnschrift, sans-serif;
@@ -31,14 +36,17 @@
 
     .portfolio-container {
       display: flex;
-      flex-wrap: nowrap; /* horizontal default */
+      flex-wrap: nowrap; /* default horizontal */
       justify-content: center;
       gap: 30px;
       margin-top: 20px;
       align-items: flex-start;
-      overflow-x: auto; /* scroll horizontal di desktop */
+      overflow-x: auto; /* scroll horizontal desktop */
       padding-bottom: 10px;
       scroll-behavior: smooth;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 1000px; /* batasi max width supaya center */
     }
 
     .card {
@@ -50,7 +58,7 @@
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
       text-align: left;
       transition: transform 0.3s;
-      flex-shrink: 0; /* jangan mengecil */
+      flex-shrink: 0;
       display: flex;
       flex-direction: column;
     }
@@ -103,12 +111,19 @@
 
     /* Responsive untuk layar kecil (HP) */
     @media (max-width: 600px) {
+      body {
+        padding: 50px 10px; /* kecilkan padding kiri kanan */
+      }
+
       .portfolio-container {
         flex-direction: column; /* vertikal */
         flex-wrap: nowrap;
         overflow-x: visible; /* hilangkan scroll horizontal */
         gap: 20px;
         align-items: center; /* center card vertikal */
+        max-width: 100%; /* full lebar */
+        margin-left: 0;
+        margin-right: 0;
       }
 
       .card {
@@ -146,6 +161,11 @@
       <a href="https://www.instagram.com/jadiberkelas_" class="btn-download" target="_blank" rel="noopener noreferrer">Lihat Desain</a>
     </div>
   </div>
+
+  <a href="index.html" class="back-link">⬅️ Kembali ke Halaman Utama</a>
+
+</body>
+</html>
 
 
   <a href="index.html" style="display:inline-block; margin-top:40px; color:#f8f9fa; font-weight:bold; text-decoration:none;">⬅️ Kembali ke Halaman Utama</a>
