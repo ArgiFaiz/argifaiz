@@ -5,7 +5,7 @@
   <title>Portofolio</title>
   <style>
     body {
-      font-family: bahnschrift;
+      font-family: bahnschrift, sans-serif;
       background-color: #2b2a2a;
       padding: 50px;
       text-align: center;
@@ -28,10 +28,13 @@
 
     .portfolio-container {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
+      flex-wrap: nowrap; /* Kartu berdampingan tanpa wrap */
+      justify-content: center; /* Sejajar di tengah */
+      gap: 30px; /* Jarak antar kartu */
       margin-top: 40px;
+      align-items: flex-start; /* Sejajar dari atas */
+      overflow-x: auto; /* Kalau kebanyakan kartu bisa scroll horizontal */
+      padding-bottom: 10px;
     }
 
     .card {
@@ -43,6 +46,9 @@
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
       text-align: left;
       transition: transform 0.3s;
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 0; /* supaya kartu tidak mengecil */
     }
 
     .card:hover {
@@ -51,6 +57,8 @@
 
     .card img {
       width: 100%;
+      height: 180px; /* tinggi sama agar sejajar */
+      object-fit: cover;
       border-radius: 12px;
       margin-bottom: 15px;
     }
@@ -83,6 +91,9 @@
     .back-link {
       display: inline-block;
       margin-top: 40px;
+      color: #f8f9fa;
+      font-weight: bold;
+      text-decoration: none;
     }
   </style>
 </head>
@@ -95,21 +106,21 @@
       <img src="page 1 exixtensial crisis konten.png" alt="Design Copywriting 1" />
       <h2>Design Copywriting 1</h2>
       <p>Desain konten Instagram untuk pengembangan diri. @jadiberkelas_.</p>
-      <a href="https://www.instagram.com/jadiberkelas_" class="btn-download" target="_blank">Lihat Desain</a>
+      <a href="https://www.instagram.com/jadiberkelas_" class="btn-download" target="_blank" rel="noopener noreferrer">Lihat Desain</a>
     </div>
 
     <div class="card">
       <img src="Konsep video advertising.png" alt="Konsep video Advertising" />
       <h2>Konsep Video Advertising</h2>
       <p>Penulisan konsep dan script konten periklanan produk Barang dan Jasa.</p>
-      <a href="https://www.instagram.com/reel/CoObl31jt4q/?utm_source=ig_web_copy_link&igsh=MTJhdXoyZjk0dXIwNQ==" class="btn-download" target="_blank">Lihat Desain</a>
+      <a href="https://www.instagram.com/reel/CoObl31jt4q/?utm_source=ig_web_copy_link&igsh=MTJhdXoyZjk0dXIwNQ==" class="btn-download" target="_blank" rel="noopener noreferrer">Lihat Desain</a>
     </div>
 
     <div class="card">
       <img src="contoh3.png" alt="Design 3" />
       <h2>Design Copywriting 3</h2>
-      <p>Proyek desain dengan gaya visual yang edukatif dan supportif.</p>
-      <a href="https://www.instagram.com/jadiberkelas_" class="btn-download" target="_blank">Lihat Desain</a>
+      <p>Proyek desain dengan gaya visual yang edukatif dan maskulin.</p>
+      <a href="https://www.instagram.com/jadiberkelas_" class="btn-download" target="_blank" rel="noopener noreferrer">Lihat Desain</a>
     </div>
   </div>
 
