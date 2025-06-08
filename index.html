@@ -10,8 +10,9 @@
       background-color: #2b2a2a;
       font-family: sans-serif;
       text-align: center;
-      padding: 50px;
+      padding: 50px 20px; /* tambah padding samping lebih kecil di HP */
       color: #f8f9fa;
+      margin: 0;
     }
 
     /* Container box untuk welcome section */
@@ -50,9 +51,32 @@
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
       font-weight: bold;
       transition: background-color 0.3s;
+      text-align: center;
     }
     a.button:hover {
       background-color: #e0a700;
+    }
+
+    /* Responsif untuk layar kecil */
+    @media (max-width: 480px) {
+      body {
+        padding: 30px 15px;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+      p {
+        font-size: 1rem;
+      }
+      a.button {
+        width: 100%; /* tombol lebar penuh di HP */
+        max-width: 300px;
+        padding: 12px 0;
+      }
+      .welcome-box {
+        padding: 15px 20px;
+        max-width: 100%;
+      }
     }
   </style>
 </head>
@@ -66,5 +90,3 @@
   <a href="selengkapnya.html" class="button">Lihat Selengkapnya</a>
   <a href="portofolio.html" class="button">Portofolio</a>
 
-</body>
-</html>
