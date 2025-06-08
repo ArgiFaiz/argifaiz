@@ -6,13 +6,16 @@
   <style>
     body {
       font-family: bahnschrift;
-      background-color:#2b2a2a;
+      background-color: #2b2a2a;
       padding: 50px;
       text-align: center;
-   }
-    h1 {
       color: #f8f9fa;
+    }
+    h1 {
       margin-bottom: 10px;
+    }
+    p {
+      margin-top: 5px;
     }
     a {
       display: inline-block;
@@ -21,20 +24,64 @@
       text-decoration: none;
       font-weight: bold;
     }
-    p {
+    
+    .card {
+      background-color: #141413;
       color: #f8f9fa;
-      margin-top: 5px;
+      padding: 20px;
+      margin: 20px auto;
+      border-radius: 12px;
+      width: 90%;
+      max-width: 500px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      text-align: left;
+    }
+    .card img {
+      width: 100%;
+      border-radius: 20px;
+      margin-bottom: 15px;
+    }
+    .card h2 {
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+    .card p {
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+    .btn-download {
+      display: inline-block;
+      background-color: #ffb703;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .btn-download:hover {
+      background-color: #e0a700;
+    }
+    a.back-link {
+      margin-top: 30px;
+      color: #f8f9fa;
+      font-weight: bold;
+      text-decoration: none;
+      display: inline-block;
     }
   </style>
 </head>
 <body>
   <h1>Portofolio Saya</h1>
   <p>Kumpulan projek yang pernah saya buat.</p>
-  <a href="index.html">⬅️ Kembali ke Halaman Utama</a>
 
-  <div class="porto-item">
-  <img src="page 1 exixtensial crisis konten.png" alt="Design Copywriting 1" class="porto-img">
-  <h2>Design Copywriting 1</h2>
-  <p>Ini adalah salah satu design yang saya buat di akun instagram tentang pengembangan diri. @jadiberkelas_.</p>
-  <a href="https://www.instagram.com/jadiberkelas_?utm_source=ig_web_button_share_sheet&igsh=Z2V1YWo3dnozbWxy" class="btn-download" target="_blank">Lihat Desain</a>
-</div>
+  <div class="card">
+    <img src="page 1 exixtensial crisis konten.png" alt="Design Copywriting 1" class="porto-img" />
+    <h2>Design Copywriting 1</h2>
+    <p>Ini adalah salah satu desain yang saya buat di akun Instagram tentang pengembangan diri. @jadiberkelas_.</p>
+    <a href="https://www.instagram.com/jadiberkelas_?utm_source=ig_web_button_share_sheet&igsh=Z2V1YWo3dnozbWxy" class="btn-download" target="_blank" rel="noopener noreferrer">Lihat Desain</a>
+  </div>
+
+  <a href="index.html" class="back-link">⬅️ Kembali ke Halaman Utama</a>
+</body>
+</html>
