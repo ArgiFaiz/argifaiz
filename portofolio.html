@@ -2,40 +2,35 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Portofolio</title>
   <style>
     body {
       font-family: bahnschrift, sans-serif;
       background-color: #2b2a2a;
-      padding: 50px 20px;
-      text-align: center;
+      padding: 20px;
       color: #f8f9fa;
       margin: 0;
+      text-align: center;
     }
 
     h1 {
       margin-bottom: 10px;
     }
 
-    p {
+    p.description {
       margin-top: 5px;
-    }
-
-    a {
-      color: #f8f9fa;
-      text-decoration: none;
-      font-weight: bold;
+      margin-bottom: 40px;
     }
 
     .portfolio-container {
       display: flex;
-      flex-wrap: nowrap; /* default desktop: kartu berdampingan */
-      justify-content: center; /* sejajar di tengah */
-      gap: 30px; /* jarak antar kartu */
-      margin-top: 40px;
-      align-items: flex-start; /* sejajar dari atas */
-      overflow-x: auto; /* scroll horizontal kalau kartu banyak */
+      flex-wrap: nowrap; /* kartu berdampingan */
+      justify-content: flex-start; /* rata kiri */
+      gap: 20px;
+      overflow-x: auto; /* scroll horizontal */
       padding-bottom: 10px;
+      -webkit-overflow-scrolling: touch; /* buat smooth scroll di iOS */
     }
 
     .card {
@@ -46,23 +41,23 @@
       width: 280px;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
       text-align: left;
+      flex-shrink: 0; /* supaya ga mengecil */
       transition: transform 0.3s;
       display: flex;
       flex-direction: column;
-      flex-shrink: 0; /* supaya kartu tidak mengecil */
     }
 
     .card:hover {
-      transform: scale(1.03);
+      transform: scale(1.05);
+      cursor: pointer;
     }
 
     .card img {
       width: 100%;
-      height: auto; /* tinggi mengikuti proporsi asli gambar */
-      object-fit: contain; /* supaya gambar tidak terpotong */
+      height: 180px;
+      object-fit: cover;
       border-radius: 12px;
       margin-bottom: 15px;
-      background-color: #222; /* biar ada latar gelap saat ada space */
     }
 
     .card h2 {
@@ -73,6 +68,7 @@
     .card p {
       font-size: 14px;
       margin-bottom: 15px;
+      flex-grow: 1;
     }
 
     .btn-download {
@@ -91,41 +87,35 @@
       background-color: #e0a700;
     }
 
-    .back-link {
-      display: inline-block;
-      margin-top: 40px;
-      color: #f8f9fa;
-      font-weight: bold;
-      text-decoration: none;
+    /* Responsif untuk layar kecil */
+    @media (max-width: 600px) {
+      .portfolio-container {
+        gap: 15px;
+        padding-bottom: 15px;
+      }
+      .card {
+        width: 220px;
+      }
+      .card img {
+        height: 140px;
+      }
     }
 
-    /* Responsif untuk layar kecil / HP */
-    @media (max-width: 600px) {
-      body {
-        padding: 30px 15px;
-      }
+    /* Kalau mau, buat scrollbar terlihat lebih keren */
+    .portfolio-container::-webkit-scrollbar {
+      height: 8px;
+    }
 
-      .portfolio-container {
-        flex-wrap: wrap; /* kartu turun satu per satu */
-        overflow-x: visible; /* hilangkan scroll horizontal */
-        gap: 20px;
-      }
-
-      .card {
-        width: 100%; /* kartu penuh layar HP */
-        margin: 0 auto;
-      }
-
-      .card img {
-        object-fit: contain;
-        height: auto;
-      }
+    .portfolio-container::-webkit-scrollbar-thumb {
+      background: #ffb703;
+      border-radius: 4px;
     }
   </style>
 </head>
 <body>
+
   <h1>Portofolio Saya</h1>
-  <p>Kumpulan projek yang pernah saya buat.</p>
+  <p class="description">Kumpulan projek yang pernah saya buat.</p>
 
   <div class="portfolio-container">
     <div class="card">
@@ -150,6 +140,7 @@
     </div>
   </div>
 
-  <a href="index.html" class="back-link">⬅️ Kembali ke Halaman Utama</a>
+  <a href="index.html" style="display:inline-block; margin-top:40px; color:#f8f9fa; font-weight:bold; text-decoration:none;">⬅️ Kembali ke Halaman Utama</a>
+
 </body>
 </html>
