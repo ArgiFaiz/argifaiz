@@ -2,6 +2,7 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Selengkapnya</title>
   <style>
     body {
@@ -27,7 +28,8 @@
     p {
       margin-top: 10px;
       margin-bottom: 10px;
-      line-height: 1;
+      line-height: 1.5;
+      font-size: 16px;
       text-align: justify;
     }
 
@@ -48,7 +50,28 @@
     .section-box h2 {
       margin-bottom: 10px;
     }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 20px;
+      }
+
+      .container {
+        max-width: 100%;
+        padding: 0 10px;
+      }
+
+      p {
+        font-size: 14px;
+        line-height: 1.4;
+      }
+
+      .section-box {
+        padding: 15px;
+      }
+    }
   </style>
+</head>
 </head>
 <body>
   <div class="container">
