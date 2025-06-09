@@ -65,17 +65,19 @@
 
     .
 
-     .button-group {
+    .button-group {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
-}    
+  flex-direction: row; /* sejajar di desktop */
+  justify-content: center;
+  gap: 20px;
+}
 
-    /* Responsif untuk layar kecil */
-    @media (max-width: 480px) {
-      body {
-        padding: 30px 15px;
+@media (max-width: 480px) {
+  .button-group {
+    flex-direction: column; /* atas bawah di HP */
+    align-items: center;
+  }
+  
       }
       h1 {
         font-size: 2rem;
