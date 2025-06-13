@@ -3,3 +3,166 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>kontak Saya</title>
+  <style>
+    
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #2b2a2a;
+      font-family: bahnschrift, sans-serif;
+      padding: 50px 20px;
+      color: #f8f9fa;
+      text-align: center;
+      margin: 0;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+      font-weight: 700;
+      font-size: 2.5rem;
+      color: #f8f9fa;
+    }
+
+    p {
+      margin-top: 5px;
+      margin-bottom: 30px;
+      font-size: 1.1rem;
+      color: #d1d1d1;
+    }
+
+    .portfolio-container {
+      display: flex;
+      flex-wrap: nowrap; /* default horizontal */
+      justify-content: center;
+      gap: 30px;
+      margin-top: 20px;
+      align-items: flex-start;
+      overflow-x: auto; /* scroll horizontal desktop */
+      padding-bottom: 10px;
+      scroll-behavior: smooth;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 1000px; /* batasi max width supaya center */
+    }
+
+    .card {
+      background-color: #141413;
+      color: #f8f9fa;
+      padding: 20px;
+      border-radius: 12px;
+      width: 280px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      text-align: left;
+      transition: transform 0.3s;
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+    }
+
+    .card img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 15px;
+    }
+
+    .card h2 {
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+
+    .card p {
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+
+    .btn-download {
+      display: inline-block;
+      background-color: #ffb703;
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+      align-self: flex-start;
+    }
+
+    .btn-download:hover {
+      background-color: #e0a700;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 40px;
+      color: #f8f9fa;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    /* Responsive untuk layar kecil (HP) */
+    @media (max-width: 600px) {
+      body {
+        padding: 50px 10px; /* kecilkan padding kiri kanan */
+      }
+
+      .portfolio-container {
+        flex-direction: column; /* vertikal */
+        flex-wrap: nowrap;
+        overflow-x: visible; /* hilangkan scroll horizontal */
+        gap: 20px;
+        align-items: center; /* center card vertikal */
+        max-width: 100%; /* full lebar */
+        margin-left: 0;
+        margin-right: 0;
+      }
+
+      .card {
+        width: 90vw; /* sesuaikan dengan layar HP */
+        max-width: 400px;
+        margin: 0 auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Portofolio Saya</h1>
+  <p>Kumpulan projek yang pernah saya buat.</p>
+
+  <div class="portfolio-container">
+    <div class="card">
+      <img src="page 1 exixtensial crisis konten.png" alt="Instagram" />
+      <h2>Instagram </h2>
+      <p>Akun Instagram pribadi saya.</p>
+      <a href="https://www.instagram.com/argifaiz_/" class="btn-download" target="_blank" rel="noopener noreferrer">Contact me</a>
+    </div>
+
+    <div class="card">
+      <img src="Konsep video advertising.png" alt="Email" />
+      <h2>Email</h2>
+      <p>Email pribadi saya: argifaiz0111@gmail.com. </p>
+      <a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSGMhqbzpsGdJxGmWkWcmhTNjPJrlXRMgGQBpmsxbvNtGzllckbvZfVJndRhhQCFxgzZsQbf" class="btn-download" target="_blank" rel="noopener noreferrer">Contact me</a>
+    </div>
+
+    <div class="card">
+      <img src="desain web.png" alt="whatsapp" />
+      <h2>Pengembangan Website</h2>
+      <p>Whatsapp business</p>
+      <a href="wa.me/6282125416467" class="btn-download" target="_blank" rel="noopener noreferrer">Contact me</a>
+    </div>
+  </div>
+
+ 
+  <a href="index.html" style="display:inline-block; margin-top:40px; color:#f8f9fa; font-weight:bold; text-decoration:none;">⬅️ Kembali ke Halaman Utama</a>
+
+</body>
+</html>
